@@ -12,7 +12,7 @@ java -version
 
 -- Get URL from Webpage: https://downloads.apache.org/kafka/3.8.1/kafka_2.12-3.8.1.tgz
 
-wget https://downloads.apache.org/kafka/3.8.1/kafka_2.12-3.8.1.tgz
+wget https://downloads.apache.org/kafka/3.8.1/kafka_2.12-3.8.1.tgz                      ```````
 
 ls
 
@@ -51,6 +51,8 @@ cd /usr/local/kafka/
 
 bin/kafka-server-start.sh config/server.properties
 
+
+
 -- Open another bash and Run below commands
 -- Producer
 
@@ -68,9 +70,9 @@ kill 27851
 
 cd /usr/local/kafka/
 
--- bin/kafka-topics.sh --create --topic kafka_project --bootstrap-server IP Address:9092 --replication-factor 1 --partitions 1
+bin/kafka-topics.sh --create --topic kafka_project --bootstrap-server 184.72.77.226:9092 --replication-factor 1 --partitions 1
 
--- bin/kafka-console-producer.sh --topic kafka_project --bootstrap-server IP Address:9092
+bin/kafka-console-producer.sh --topic kafka_project --bootstrap-server 184.72.77.226:9092
 
 -- Open another bash and Run below commands
 -- Consumer
@@ -79,8 +81,8 @@ ssh connect ec2 to vs code
 
 cd /usr/local/kafka/
 
-bin/kafka-console-consumer.sh --topic kafka_project --bootstrap-server IP Address:9092
+bin/kafka-console-consumer.sh --topic kafka_project --bootstrap-server 184.72.77.226:9092
 
-Then Run KafkaProducer.py
-After Run KafkaConsumer.py But both should run in separate terminals
+Then Run KafkaProducer.ipynb
+After Run KafkaConsumer.ipynb But both should run in separate terminals
 Then Check S3Bucket
